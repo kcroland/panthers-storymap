@@ -163,7 +163,7 @@
         </dt>
     </dl>
 
-    <!--the info page TODO-->
+    <!--info modal-->
     <div class="modal fade" id="info-modal" role="dialog">
         <div class="modal-dialog modal-md">
             <div class="modal-content">
@@ -225,7 +225,6 @@
 <!-- main javascript -->
 <script type="text/javascript">
 
-
     // Legends
     var mortality_legend = '<i style="background: red;"></i><p><b>Mortality</b></p>';
     var crossings_legend = '<div><i style="background: #0aff00;"></i><p><b>Crossing</b></p></div>' +
@@ -236,17 +235,10 @@
     var range_legend = '<div><i style="background: orange;"></i><p><b>Historic</b></p></div>' +
         '<div style="margin-top: 5px;"><i style="background: #f201f2;"></i><p><b>Current</b></p></div>';
 
-    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
-    // var layers = {
-    //      layer1: {layer: layer1, legend: legend1},
-    //      layer2: {layer: layer2, legend: legend2}
-    //      ...
-    // }
-
     // icons
     var puma = L.icon({iconUrl: 'imgs/puma.png', iconSize: [150,100]});
-    var range = L.icon({iconUrl: 'imgs/range.png', iconSize: [525,406]});
 
+    // layers
     var layers = {
         ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
         mortality: {
@@ -351,12 +343,11 @@
         recovery: {lat: 26.165299, lng: -81.636963, zoom: 9, name: 'Recovery', layers: [layers.current, layers.roads, layers.crossings]},
         end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
     };
-    //-82.636963 26.165299
 
     $('#storymap').storymap({
         scenes: scenes,
         baselayer: layers.cartodb_midnight,
-        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        legend: true,
         credits: "",
         loader: true,
         scalebar: false,
@@ -364,7 +355,6 @@
         navwidget: true,
 
         createMap: function () {
-            // create a map in the "map" div, set the view to a given place and zoom
             var map = L.map($(".storymap-map")[0], {
                 zoomControl: false, scrollWheelZoom: false, fadeAnimation: true,
                 zoomAnimation: true
