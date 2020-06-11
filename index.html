@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Florida Panthers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="Florida Panther"/>
+    <!-- <meta property="og:url" content="http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html"/> -->
+    <meta property="og:description" content="Endangered Species"/>
+    <!-- <meta property="og:image" content="../../img/social.png"/> -->
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+    <!--add favicon for the web page-->
+    <!-- <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon"> -->
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
+    <!--add required libraries-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!--boostrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--mini globle map-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="../../js/globeminimap.js"></script> -->
+
+    <!--story map plugin-->
+    <script src="js/storymap.2.5.js"></script>
+</head>
+<body>
+
+<div id="storymap" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 storymap-story">
+            <section data-scene="overview" data-background="imgs/head.gif">
+                <div class="fullscreen text-center">
+
+                    <h1 class="display-4 d-flex justify-content-center">Florida Panthers</h1>
+
+
+                    <h2 class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                      One of the most endangered species in the world.
+                    </h2>
+                </div>
+            </section>
+            <section data-scene="species">
+                <h2>Puma Concolor Coryi</h2>
+                <p>
+                  The <strong>Florida Panther</strong> is part of the puma concolor family and is a subspecies of cougar.
+                  These big cats, getting up to 150lbs and 7 feet in length, are born with spots on their
+                  fur that fade as they grow older. Most of their days are spent hunting for both small
+                  mammals like rabbits and mice and even large animals like wild pigs or alligators, whom
+                  are the only know natural predator of the Florida Panther. Very seldomly seen, there's only 70 total
+                  confirmed <strong id="yellow">sightings</strong> from 2004 to 2018 as seen in the map on the
+                  right.
+                </p>
+                <img src="imgs/fierce.jpg" class="inside-image" alt="face of puma">
+                <small>Image from at <a href="https://www.britannica.com/animal/Florida-panther">britannica</a></small>
+            </section>
+
+            <section data-scene="range">
+                <h2>Range: Historic vs. Current</h2>
+                <p>
+                  <strong class="historic">Historically</strong>, these mammals used to occupy much of the southeast region of the United
+                  States all the way from the lower areas of Florida to Louisiana and the states in
+                  between. From grasslands to swamps, areas where they roamed were open and allowed
+                  for them to be social, reproduce, and hunt prey- which played an important role
+                  to habitat selection.
+                </p>
+                <p>
+                  <strong id="current">Today</strong>, only a small region on the southwestern tip of Florida acts as a home,
+                  <strong>less than 5%</strong> of the space that they used to live in.
+                  <img src="imgs/range.png" class="inside-image" alt="map of habitat range">
+                </p>
+            </section>
+
+            <section data-scene="endangered">
+                <h2 id="red">Endangered</h2>
+                <p>
+                  Rapid urbanization has been a major threat to the Florida Panther population and caused
+                  the species to be added to the <strong>endangered</strong> species list in 1973. From 500
+                  individuals in 1900, the population had dwindled down to 12-20 adults. There
+                  are estimated to be between 120 and 130 Florida Panther left, making them one of the
+                  world's most endangered species.
+                </p>
+                <p>
+                  Land use planning with accommodations for the Florida Panther become more uncommon as
+                  residential development, road construction, conversion to agriculture, and mining
+                  continue to take over. The United States Fish and Wildlife Service hope to see 3
+                  populations of at least 240 individuals before the species will be delisted.
+                </p>
+            </section>
+
+            <section data-scene="threat">
+                <h2>Motorized Predator</h2>
+                <p>
+                  Although it isn't often for humans to come in contact with the animals,
+                  the mortality of Florida Panthers can be attributed much to <strong id="red">vehicles</strong>.
+                  And in addition, humans threaten the lives of these big cats through poaching,
+                  habitat loss from construction, and pollution. Year after year a significant portion
+                  of the population is killed, making it difficult to maintain genetic diversity
+                  and overall population growth.
+                  <img src="imgs/sign.jpg" class="inside-image" alt="panther crossing sign">
+                </p>
+            </section>
+            <section data-scene="recovery">
+                <h2>Recovery and the Future</h2>
+                <p>
+                  The conservation of Florida's forests and swamps plays a vital role in keeping this
+                  species alive. Since the Florida Panther was placed on the endangered species list,
+                  there have been a few conservation programs established to keep this species around
+                  including the construction of wildlife <strong id="green">crossings</strong>
+                  or bridges to allow animals to safely cross busy <strong class="historic">roads</strong>
+                </p>
+                <p>
+                  In 1989, the Florida Panther National Wildlife Refuge was established as a means to
+                  protect the Florida Panther. To limit public encounters with the big cats, only a few
+                  hiking trails pass through the refuge which contains both private and public land. As
+                  these animals need up to 200 square miles of territory, they have been afforded 26,400 acres
+                  in Everglades National Park, Big Cypress National Preserve, and Fakahatchee Strand
+                  State Preserve.
+                </p>
+            </section>
+
+            <section data-scene="end" data-background="https://assets.nrdc.org/sites/default/files/uploaded-files/florida_panther_family_5164634982.jpg?itok=SNOjtVy0">
+                <div class="fullscreen text-center">
+                    <div style="background: black; margin: auto auto;">
+                        <h1 class="display-4 d-flex justify-content-center">Thank you for viewing!</h1>
+                        <!-- <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">Your
+                            Acknowledgement goes here
+                        </small> -->
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!--map div-->
+        <div class="col-sm-6 col-md-8 storymap-map"></div>
+    </div>
+
+
+    <dl>
+        <dt>
+            <!-- github icon-->
+            <a class="fab fa-github btn" href="https://github.com/kcroland/panthers-storymap" style="top:20px"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!-- info icon-->
+            <i class="fas fa-info-circle btn" style="top:40px" data-toggle="modal" data-target="#info-modal"></i>
+        </dt>
+    </dl>
+
+    <!--the info page TODO-->
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is a web map of major cities in Oregon. It is mainly made as a demo for a course GEOG 371:
+                        Web Mapping provided by Oregon State University. The story map library is derived from the
+                        storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality
+                        relies on both leaflet and Boostrap.</p>
+                    <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.5 | MIT License </p>
+                    <p><b>Author: Bo Zhao</b> | College of Earth, Ocean, Atmospheric Science | Oregon State University
+                    </p>
+                    <p>The context about Oregon cities was collected from Wikipedia.</p>
+                    <p>The <a href="https://www.youtube.com/watch?v=UJ_vQC9PNY4">background video</a> on the front page
+                        was clipped from Youtube. </p>
+                    <p>The favicon image was acquired from <a>http://www.udlcenter.org/advocacy/state/oregon.</a></p>
+                    <p>This story map uses geospatial data from mapbox, Google Earth Engine, ESRI Map, Open Street Maps
+                        and Oregon Explorer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- main javascript -->
+<script type="text/javascript">
+
+
+    // Legends
+    var mortality_legend = '<i style="background: red;"></i><p><b>Mortality</b></p>';
+    var crossings_legend = '<div><i style="background: #0aff00;"></i><p><b>Crossing</b></p></div>' +
+        '<div style="margin-top: 5px;"><i style="background: #ff6200;"></i><p><b>Roads</b></p></div>';
+    var vehicle_legend = '<div><i style="background: red;"></i><p><b>Vehicle</b></p></div>' +
+        '<div style="margin-top: 5px;"><i style="background: #00ffd4;"></i><p><b>Other</b></p></div>';
+    var interaction_legend = '<i style="background: #fffe00;"></i><p><b>Interaction</b></p>';
+    var range_legend = '<div><i style="background: orange;"></i><p><b>Historic</b></p></div>' +
+        '<div style="margin-top: 5px;"><i style="background: #f201f2;"></i><p><b>Current</b></p></div>';
+
+    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
+    // var layers = {
+    //      layer1: {layer: layer1, legend: legend1},
+    //      layer2: {layer: layer2, legend: legend2}
+    //      ...
+    // }
+
+    // icons
+    var puma = L.icon({iconUrl: 'imgs/puma.png', iconSize: [150,100]});
+    var range = L.icon({iconUrl: 'imgs/range.png', iconSize: [525,406]});
+
+    var layers = {
+        ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
+        mortality: {
+            layer: L.geoJson.ajax('data/mortality.geojson', {
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+                       color: 'black',
+                       fillColor: "red",
+                       weight: 1,
+                       radius: 3.5,
+                       fillOpacity: 1
+                    }).bindPopup('Year: ' + feature.properties.YEAR);
+                }
+            }),
+            legend: mortality_legend
+        },
+        vehicle: {
+            layer: L.geoJson.ajax('data/mortality.geojson', {
+                pointToLayer: function (feature, latlng) {
+                  let style = {
+                      color: 'black',
+                      fillColor: "red",
+                      weight: 1,
+                      radius: 3.5,
+                      fillOpacity: 1
+                  };
+                  style.fillColor = feature.properties.CAUSE === 'Vehicle' ? 'red' : '#00ffd4';
+                  return L.circleMarker(latlng, style).bindPopup('Cause: ' + feature.properties.CAUSE);
+                }
+            }),
+            legend: vehicle_legend
+        },
+        interactions: {
+            layer: L.geoJson.ajax('data/interactions.geojson', {
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+                       color: 'black',
+                       fillColor: "#fffe00",
+                       weight: 1,
+                       radius: 3.5,
+                       fillOpacity: 1
+                    }).bindPopup('Type: ' + feature.properties.Type);
+                }
+            }),
+            legend: interaction_legend
+        },
+        crossings: {
+            layer: L.geoJson.ajax('data/crossings.geojson', {
+                pointToLayer: function (feature, latlng) {
+                    return L.circleMarker(latlng, {
+                       color: 'black',
+                       fillColor: "#0aff00",
+                       weight: 1,
+                       radius: 3.5,
+                       fillOpacity: 1
+                    }).bindPopup('Name: ' + feature.properties.NAME);
+                }
+            }),
+            legend: crossings_legend
+        },
+        puma: { layer: L.marker([27.6648, -82.621582], {icon: puma})},
+        roads: {
+          layer: L.geoJson.ajax('data/roads.geojson', {
+              color: '#ff6200',
+              fillColor: '#ff6200',
+              weight: 2,
+              fillOpacity: 1
+          })
+        },
+        historic: {
+            layer: L.geoJson.ajax('data/historic.geojson', {
+              color: 'black',
+              fillColor: 'orange',
+              weight: 1,
+              fillOpacity: 0.4
+            }),
+            legend: range_legend
+        },
+        current: {
+            layer: L.geoJson.ajax('data/current.geojson', {
+              color: 'black',
+              fillColor: '#f201f2',
+              weight: 1,
+              fillOpacity: 0.3
+            }),
+        },
+        satellite: {
+            layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+                id: 'mapbox.satellite'
+            })
+        },
+        cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')},
+        cartodb_midnight: {layer: L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-midnight/{z}/{x}/{y}.png')}
+    };
+
+    var scenes = {
+        overview: {lat: 27.6648, lng: -82.621582, zoom:7, name: 'Cover Page', layers: []},
+        species: {lat: 27.6648, lng: -82.621582, zoom:7, name: 'Species', layers: [layers.puma, layers.interactions]},
+        range: {lat: 30.937246, lng: -90.153809, zoom: 6, name: 'Range', layers: [layers.historic, layers.current]},
+        endangered: {lat: 27.6648, lng: -82.621582, zoom: 7, name: 'Endangered', layers: [layers.mortality]},
+        threat: {lat: 27.6648, lng: -82.621582, zoom: 7, name: 'Threat', layers: [layers.vehicle]},
+        recovery: {lat: 26.165299, lng: -81.636963, zoom: 9, name: 'Recovery', layers: [layers.current, layers.roads, layers.crossings]},
+        end: {lat: 44.0000000, lng: -123.5000000, zoom: 7, name: 'The End'}
+    };
+    //-82.636963 26.165299
+
+    $('#storymap').storymap({
+        scenes: scenes,
+        baselayer: layers.cartodb_midnight,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        credits: "",
+        loader: true,
+        scalebar: false,
+        flyo: true,
+        navwidget: true,
+
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map($(".storymap-map")[0], {
+                zoomControl: false, scrollWheelZoom: false, fadeAnimation: true,
+                zoomAnimation: true
+            }).setView([44, -120], 7);
+            return map;
+        }
+    });
+</script>
+</body>
+</html>
