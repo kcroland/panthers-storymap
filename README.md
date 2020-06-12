@@ -20,11 +20,11 @@ The following table lists the data used within this storymap. Those with an aste
 | Data   | Description  | Source |
 |--------|--------------|--------|
 | `crossings.geojson`       |   Points showing the wildlife crossings built in Florida          |   [FWC](http://geodata.myfwc.com/datasets/da8f537fae4042799b1d2aff8a77642b_1?geometry=-81.911%2C26.086%2C-80.868%2C26.301)     |
-|  *`current.geojson`      |  **Polygon** showing the current habitat of Florida Panthers           |  [USGS](https://www.sciencebase.gov/catalog/item/59f5e20ae4b063d5d307dc45)      |
-|  *`historic.geojson`      |   **Polygon** showing the historic habitat of Florida Panthers before the arrival of European Settlers           |  [University of Florida](https://www.researchgate.net/publication/273968104_The_Florida_Panther_Past_Present_and_Future#pf1)      |
+|  `current.geojson`*      |  **Polygon** showing the current habitat of Florida Panthers           |  [USGS](https://www.sciencebase.gov/catalog/item/59f5e20ae4b063d5d307dc45)      |
+|  `historic.geojson`*      |   **Polygon** showing the historic habitat of Florida Panthers before the arrival of European Settlers           |  [University of Florida](https://www.researchgate.net/publication/273968104_The_Florida_Panther_Past_Present_and_Future#pf1)      |
 |  `interactions.geojson`      |   **Points** showing the confirmed interactions between humans and Florida Panthers from 2004 to 2018           |   [Florida GIS Data Portal](http://geodata.myflorida.com/datasets/myfwc::confirmed-human-florida-panther-interactions)     |
 |  `mortality.geojson`      |   **Points** showing dead Florida Panthers from 1972 to 2020          |  [FWC](http://geodata.myfwc.com/datasets/3aa8eaa2a5ee4ce9912ad4d1edd8f613_7)      |
-|  *`roads.geojson`         |   Polyline showing two major roads on which wildlife crossings were built           |   -     |
+|  `roads.geojson`*         |   Polyline showing two major roads on which wildlife crossings were built           |   -     |
 
 > Layers in QGIS GUI
 >
@@ -38,10 +38,10 @@ This project takes advantage of `storymap.js` built by [Bo Zhao](https://github.
 
 | Technology | Description |
 |---------|-------------|
-|   `jQuery`      |    JavaScript library for fast and more readable DOM manipulation, event handling, and Ajax         |
-|   `Bootstrap 4`      |   Framework for quickly building structure with easy to use CSS properties          |
-|  `Leaflet`      |  JavaScript library for  building interactive web maps        |
-|   `Google Material Icon`      |   Icons using Google's material design language          |
+|   jQuery      |    JavaScript library for fast and more readable DOM manipulation, event handling, and Ajax         |
+|   Bootstrap 4      |   Framework for quickly building structure with easy to use CSS properties          |
+|  Leaflet      |  JavaScript library for  building interactive web maps        |
+|   Google Material Icon      |   Icons using Google's material design language          |
 
 ---
 
