@@ -1,6 +1,7 @@
 # Florida Panther Storymap
 
 _This final project was created for GEOG 458 with Bo Zhao at the University of Washington_
+[Storymap quick link](https://kcroland.github.io/panthers-storymap/)
 
 ![Florida panther](imgs/panther-main.jpg)
 > _image from [nature.org](https://www.nature.org/en-us/about-us/where-we-work/united-states/florida/stories-in-florida/save-the-florida-panther/_)_
